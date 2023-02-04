@@ -29,13 +29,13 @@ function ContactForm({ onSubmitForm }) {
       <FormStyled autoComplete="off">
         <Label>
           Name
-          <FieldStyled type="text" name="name" />
+          <FieldStyled type="text" name="name" placeholder="Name" />
           <ErrorMessagetyled name="name" component="div" />
         </Label>
 
         <Label>
           Number
-          <FieldStyled type="tel" name="number" />
+          <FieldStyled type="tel" name="number" placeholder="Number" />
           <ErrorMessagetyled component="div" name="number" />
         </Label>
 

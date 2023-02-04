@@ -8,10 +8,13 @@ const ContactsList = ({ contacts, onDeleteContact }) => {
       <List>
         {contacts.map(({ id, name, number }) => (
           <Link key={id}>
-            {name}: {number}
-            <ButtonDelete type="button" onClick={() => onDeleteContact(id)}>
-              Delete
-            </ButtonDelete>
+            <div className="contact">
+              <h2 className="contactName">{name}</h2>
+              <p>{number}</p>
+              <ButtonDelete type="button" onClick={() => onDeleteContact(id)}>
+                Delete
+              </ButtonDelete>
+            </div>
           </Link>
         ))}
       </List>

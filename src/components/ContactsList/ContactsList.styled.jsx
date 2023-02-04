@@ -1,16 +1,16 @@
 import styled from '@emotion/styled';
 
 export const List = styled.ul`
-
-`
+  overflow: hidden;
+  border-left: 1px solid #ccc;
+  padding-bottom: 30px;
+`;
 export const Link = styled.li`
-margin-bottom: 8px;
-
-`
+  list-style: none;
+`;
 export const ButtonDelete = styled.button`
-  margin-left: 8px;
-  width: 64px;
-  border-radius: 16px;
-  background-color: #8a8686;
-  color: black;
+  padding: 10px 30px;
+  background: #f8a035;
+  color: #fff;
+  border: none;
 `;

@@ -2,30 +2,16 @@ import styled from '@emotion/styled';
 import { Form, Field, ErrorMessage } from 'formik';
 
 export const FormStyled = styled(Form)`
-outline: 2px solid black;
-display: flex;
-flex-direction: column;
-justify-content: center;
-height:180px;
-width:85%;
-padding: 16px;
-border-radius: 16px;
+  float: left;
+  margin-right: 30px;
 `;
 
 export const FieldStyled = styled(Field)`
-  margin-left: 16px;
-  border-radius: 16px;
-  background-color: #d9d9d9;
-  margin-bottom: 16px;
-  padding: 4px;
-  border: none;
-  &:hover {
-    color: black;
-  }
-  &:focus {
-    background-color: #fff;
-    box-shadow: -2px 4px 26px 10px rgba(235, 95, 95, 0.75);
-  }
+  display: block;
+  margin: 0 0 15px 0;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
 `;
 
 export const ErrorMessagetyled = styled(ErrorMessage)`
@@ -41,8 +27,8 @@ export const Label = styled.label`
 `;
 
 export const ButtonSubmit = styled.button`
-  width: 128px;
-  border-radius: 16px;
-  background-color: blue;
+  padding: 10px 30px;
+  background: #f8a035;
   color: #fff;
+  border: none;
 `;
