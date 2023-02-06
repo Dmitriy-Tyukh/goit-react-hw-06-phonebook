@@ -1,8 +1,17 @@
-import React from "react";
-import PropTypes from 'prop-types';
 import { Input, Label } from "./Filter.styled";
+import { useDispatch, useSelector } from "react-redux";
+import { getValue } from "redux/selectors";
+import { searchContact } from "redux/filterSlice";
 
-function Filter({ filter, onFiltContacts }) {
+function Filter() {
+    const dispatch = useDispatch();
+    const filter = useSelector(getValue);
+
+    const handelFilter = (event) => {
+        const value = event.target.value;
+        dispatch(searchContact(value));
+    }
+
   return (
     <Label>
       Find contacts by name
@@ -10,7 +19,7 @@ function Filter({ filter, onFiltContacts }) {
         type="text"
         name="filter"
         value={filter}
-        onChange={onFiltContacts}
+        onChange={handelFilter}
         placeholder="Find contacts"
         pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
@@ -21,8 +30,3 @@ function Filter({ filter, onFiltContacts }) {
 }
 
 export default Filter;
-
-Filter.propTypes = {
-  filter: PropTypes.func,
-  onFiltContacts: PropTypes.func.isRequired,
-};
